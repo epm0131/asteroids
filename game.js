@@ -48,7 +48,13 @@
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
 
         }
-        // Implement me!
+        else if (event.keyCode === 38) {
+          ship.velocity += 10;
+          var shipMove = getShipMovement(ship.velocity, ship.angle);
+          ship.htmlElem.style.top = '' + shipMove.top + 'px';
+          ship.htmlElem.style.left = '' + shipMove.left + 'px';
+          console.log(ship);
+        }
 
     }
     document.querySelector('body').addEventListener('keyup', handleKeys);
