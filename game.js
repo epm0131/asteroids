@@ -3,11 +3,14 @@
 
     var shipElem = document.getElementById('ship');
 
-    var ship {
-      var velocity: 0,
-      var angel: 0
+    var ship = {
+        htmlElem: shipElem,
+         velocity: 0,
+         angle: 0
+       };
 
-    };
+       console.log(ship);
+
 
     // Create your "ship" object and any other variables you might need...
 
@@ -54,7 +57,7 @@
         // NOTE: you will need to change these arguments to match your ship object!
         // What does this function return? What will be in the `move` variable?
         // Read the documentation!
-        var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
+        // var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
 
 
         // Move the ship here!
