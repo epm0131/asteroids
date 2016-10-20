@@ -3,6 +3,12 @@
 
     var shipElem = document.getElementById('ship');
 
+    var ship {
+      var velocity: 0,
+      var angel: 0
+
+    };
+
     // Create your "ship" object and any other variables you might need...
 
 
