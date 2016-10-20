@@ -38,6 +38,11 @@
      */
     function handleKeys(event) {
         console.log(event.keyCode);
+        if (event.keyCode === 37) {
+          console.log('hello');
+        ship.htmlElem.style.backgroundColor = '#005500';  
+
+        }
 
         // Implement me!
 
