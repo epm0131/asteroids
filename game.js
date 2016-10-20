@@ -6,7 +6,7 @@
     var ship = {
         htmlElem: shipElem,
          velocity: 0,
-         angle: 0
+         angle: 90
        };
 
        console.log(ship);
@@ -40,8 +40,10 @@
         console.log(event.keyCode);
         if (event.keyCode === 37) {
           console.log('hello');
-        ship.htmlElem.style.transform = 'rotate(-5deg)';
-        ship.htmlElem.style.transitionDuration = ('.1s');
+          ship.angle -= 5;
+          console.log(ship.angle);
+          ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
+          console.log('rotate(' + ship.angle + 'deg)');
 
         }
 
