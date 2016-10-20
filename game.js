@@ -40,7 +40,8 @@
         console.log(event.keyCode);
         if (event.keyCode === 37) {
           console.log('hello');
-        ship.htmlElem.style.backgroundColor = '#005500';  
+        ship.htmlElem.style.transform = 'rotate(-5deg)';
+        ship.htmlElem.style.transitionDuration = ('.1s');
 
         }
 
