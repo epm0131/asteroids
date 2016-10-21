@@ -6,11 +6,11 @@
     var ship = {
         htmlElem: shipElem,
          velocity: 0,
-         angle: 90
+         angle: 0
        };
 
-       console.log(ship);
-
+       ship.htmlElem.style.top = '400px';
+       ship.htmlElem.style.left = '50px';
 
     // Create your "ship" object and any other variables you might need...
 
@@ -39,7 +39,7 @@
     function handleKeys(event) {
         console.log(event.keyCode);
         if (event.keyCode === 37) {
-          ship.angle -= 10;
+          ship.angle -=10;
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
 
         }
@@ -49,7 +49,7 @@
 
         }
         else if (event.keyCode === 38) {
-          ship.velocity += 10;
+          ship.velocity += 1;
         }
 
     }
@@ -69,11 +69,15 @@
         // What does this function return? What will be in the `move` variable?
         // Read the documentation!
         var move = getShipMovement(ship.velocity, ship.angle);
-        ship.htmlElem.style.top = 0;
-        console.log(ship.htmlElem.style.top, 'hello!!!')
 
-        // ship.htmlElem.style.top = '' + move.top + 'px';
-        // ship.htmlElem.style.left = '' + shipMove.left + 'px';
+        var top = (parseInt(ship.htmlElem.style.top));
+        top -= move.top;
+        ship.htmlElem.style.top = top + 'px';
+
+        var left = (parseInt(ship.htmlElem.style.left));
+        left += move.left;
+        ship.htmlElem.style.left = left + 'px';
+
 
 
 
