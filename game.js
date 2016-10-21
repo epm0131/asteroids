@@ -50,10 +50,6 @@
         }
         else if (event.keyCode === 38) {
           ship.velocity += 10;
-          var shipMove = getShipMovement(ship.velocity, ship.angle);
-          ship.htmlElem.style.top = '' + shipMove.top + 'px';
-          ship.htmlElem.style.left = '' + shipMove.left + 'px';
-          console.log(ship);
         }
 
     }
@@ -72,7 +68,14 @@
         // NOTE: you will need to change these arguments to match your ship object!
         // What does this function return? What will be in the `move` variable?
         // Read the documentation!
-        // var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
+        var move = getShipMovement(ship.velocity, ship.angle);
+        ship.htmlElem.style.top = 0;
+        console.log(ship.htmlElem.style.top, 'hello!!!')
+
+        // ship.htmlElem.style.top = '' + move.top + 'px';
+        // ship.htmlElem.style.left = '' + shipMove.left + 'px';
+
+
 
 
         // Move the ship here!
