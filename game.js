@@ -17,7 +17,7 @@
 
     var allAsteroids = [];
     shipElem.addEventListener('asteroidDetected', function (event) {
-      
+
 
 
         // You can detect when a new asteroid appears with this event.
@@ -25,8 +25,7 @@
 
         // What might you need/want to do in here?
 
-
-
+        allAsteroids.push(event.detail);
     });
 
     /**
@@ -45,7 +44,7 @@
         if (event.keyCode === 37) {
           ship.angle -=20;
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
-
+          console.log(event.keyCode, 'hello!!!!');
         }
         else if (event.keyCode === 39) {
           ship.angle += 20;
